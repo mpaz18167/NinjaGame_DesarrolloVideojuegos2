@@ -12,15 +12,15 @@ public class CharacterController : MonoBehaviour
     public LayerMask capaSuelo;
 
 
-    private Rigidbody2D rigidBody;
-    private BoxCollider2D boxCollider;
+    private Rigidbody rigidBody;
+    private BoxCollider boxCollider;
     private bool miraDerecha = true;
     private int saltosRestantes;
 
     private void Start()
     {
-        rigidBody = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        rigidBody = GetComponent<Rigidbody>();
+        boxCollider = GetComponent<BoxCollider>();
         saltosRestantes = saltosMaximos;   
 
     }
@@ -62,7 +62,7 @@ public class CharacterController : MonoBehaviour
         {
             saltosRestantes--;
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0f);
-            rigidBody.AddForce(Vector2.up * fuerzasalto, ForceMode2D.Impulse);
+            rigidBody.AddForce(Vector2.up * fuerzasalto, (ForceMode)ForceMode2D.Impulse);
         }
     }
 

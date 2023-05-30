@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        TargetPos = new Vector3(Target.transform.position.x,Target.transform.position.y, transform.position.z);
+        TargetPos = new Vector3(Target.transform.position.x + 5,Target.transform.position.y+3, transform.position.z);
 
         if (Target.transform.localScale.x ==1)//DERECHA
         {

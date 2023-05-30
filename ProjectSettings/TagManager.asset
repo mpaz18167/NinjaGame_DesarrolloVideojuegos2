@@ -38,6 +38,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Cielo
+    uniqueID: 353293501
+    locked: 0
+  - name: Nubes
+    uniqueID: 3170200125
+    locked: 0
+  - name: Ciudad3
+    uniqueID: 3702986211
+    locked: 0
+  - name: Ciudad2
+    uniqueID: 353305131
+    locked: 0
+  - name: Ciudad1
+    uniqueID: 2612431601
+    locked: 0
+  - name: Fondo
+    uniqueID: 2190019247
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
