@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class FondoParallax : MonoBehaviour
 {
-    [SerializeField] private Vector2 velocidadMovimiento;
+    private float lenght, startpos;
+    public GameObject cam;
+    public float parallaxEffect;
 
-    private Vector2 offset;
-
-    private Material material;
-    private Rigidbody2D jugadorRB;
-
-    private void Awake()
+    private void Start()
     {
-        material = GetComponent<SpriteRenderer>().material;
-        jugadorRB=GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        startpos = transform.position.x;
+        lenght = GetComponent<SpriteRenderer>().bounds.size.x;
     }
-
     private void Update()
     {
-        offset = (jugadorRB.velocity.x*0.1f)*velocidadMovimiento*Time.deltaTime;
-        material.mainTextureOffset += offset;
+        float temp = (cam.transform.position.x * (1 - parallaxEffect));
+        float dist = (cam.transform.position.x * parallaxEffect);
+
+        transform.position=new Vector3(startpos+dist,transform.position.y,transform.position.z);
+
+        if (temp > startpos + lenght) startpos += lenght;
+        else if(temp<startpos-lenght) startpos -= lenght;
     }
 }

@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 15
   fuerzasalto: 10
-  saltosMaximos: 2
+  saltosMaximos: 1
   capaSuelo:
     serializedVersion: 2
     m_Bits: 64
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 1565713965}
   - component: {fileID: 1565713968}
   - component: {fileID: 1565713969}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565713964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.75, y: 4.99, z: 0}
+  m_LocalPosition: {x: -10.75, y: 4.99, z: -0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -583,6 +583,51 @@ MonoBehaviour:
   Target: {fileID: 149976063}
   HaciaAdelante: 3
   Smoothing: 2
+--- !u!1 &1934232726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1934232728}
+  - component: {fileID: 1934232727}
+  m_Layer: 0
+  m_Name: SkyBoxManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1934232727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934232726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458a717739428bc429b6f8c904415d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!4 &1934232728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934232726}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.6599836, y: 5.743318, z: -2.8975825}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1952591870
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 48602cf6ddb6653498ba16375cbec31e, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 48602cf6ddb6653498ba16375cbec31e, type: 3}
       propertyPath: m_Controller
       value: 
@@ -798,11 +847,11 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 48602cf6ddb6653498ba16375cbec31e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 149976066}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 48602cf6ddb6653498ba16375cbec31e, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 149976068}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 48602cf6ddb6653498ba16375cbec31e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 149976067}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 48602cf6ddb6653498ba16375cbec31e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 149976066}
   m_SourcePrefab: {fileID: 100100000, guid: 48602cf6ddb6653498ba16375cbec31e, type: 3}

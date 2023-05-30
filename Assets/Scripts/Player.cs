@@ -47,7 +47,7 @@ public class CharacterController : MonoBehaviour
         if ((inputMov < 0 && miraDerecha==true)||(inputMov > 0 && miraDerecha == false))
         {
             miraDerecha = !miraDerecha;
-            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y,-transform.localScale.z);
         }
     }
 
@@ -62,7 +62,7 @@ public class CharacterController : MonoBehaviour
         {
             saltosRestantes--;
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0f);
-            rigidBody.AddForce(Vector2.up * fuerzasalto, (ForceMode)ForceMode2D.Impulse);
+            rigidBody.AddForce(Vector3.up * fuerzasalto, ForceMode.Impulse);
         }
     }
 
